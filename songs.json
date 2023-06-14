@@ -1,0 +1,58 @@
+[
+    {
+        "id": 1,
+        "preview": "./audio/1.mp3",
+        "title": "Head Above Water",
+        "artist" :{"name" :  "Avril Lavigne"},
+        "html": "Head Above Water <br><div class=\"subtitle\">Avril Lavigne</div>",
+        "album":{"cover_big": "./img/1.jpg"}
+    },
+    {
+        "id": 2,
+        "preview": "./audio/2.mp3",
+        "title": "Take me Away",
+        "artist" :{"name" :  "Avril Lavigne"},
+        "html": "Take me Away<br><div class=\"subtitle\">Avril Lavigne</div>",
+        "album":{"cover_big": "./img/2.jpg"}
+    },
+    {
+        "id": 3,
+        "preview": "./audio/3.mp3",
+        "title": "Rock&Roll",
+        "artist" :{"name" :  "Avril Lavigne"},
+        "html": "Rock&Roll<br><div class=\"subtitle\">Avril Lavigne</div>",
+        "album":{"cover_big": "./img/3.jpeg"}
+    },
+    {
+        "id": 4,
+        "preview": "./audio/4.mp3",
+        "title": "NoBody's Home",
+        "artist" :{"name" :  "Avril Lavigne"},
+        "html": "NoBody's Home<br><div class=\"subtitle\">Avril Lavigne</div>",
+        "album":{"cover_big": "./img/4.jpeg"}
+    },
+    {
+        "id": 5,
+        "preview": "./audio/5.mp3",
+        "title": "My Happy Ending",
+        "artist" :{"name" :  "Avril Lavigne"},
+        "html":"My Happy Ending<br><div class=\"subtitle\">Avril Lavigne</div",
+        "album":{"cover_big": "./img/5.jpeg"}
+    },
+    {
+        "id": 6,
+        "preview": "./audio/6.mp3",
+        "title": "The best Damn thing",
+        "artist" :{"name" :  "Avril Lavigne"},
+        "html":"The best Damn Thing<br><div class=\"subtitle\">Avril Lavigne</div",
+        "album": {"cover_big":"./img/6.jpeg"}
+    },
+    {
+        "id": 7,
+        "preview": "./audio/7.mp3",
+        "title": "The best Damn thing",
+        "artist" :{"name" :  "Avril Lavigne"},
+        "html":"The best Damn Thing<br><div class=\"subtitle\">Avril Lavigne</div",
+        "album":{"cover_big": "./img/7.webp"}
+    }
+]

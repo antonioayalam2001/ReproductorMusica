@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/png" href="./img/favicon.ico" sizes="32x32" />
+
+    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" /> -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,0"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Tunasfy</title>
+  </head>
+  <body>
+    <header>
+      <div class="menu_side">
+        <h1>
+          Top 5 Favourites
+          <i class="bi material-icons" id="hideMenuButton">menu</i>
+        </h1>
+        <div class="playlist">
+          <h4 class="active">
+            <span></span><i class="bi material-icons">music_note</i>Playlist
+          </h4>
+          <!-- <h4><span></span><i class="bi material-icons">music_note</i>Last listening</h4> -->
+          <!-- <h4><span></span><i class="bi material-icons">music_note</i>Recommendations</h4> -->
+        </div>
+        <div class="menu_song">
+          <!-- <li class="songItem">
+            <span>01</span>
+            <img src="./img/1.jpg" alt="song__title" />
+            <h5>
+              Take Me Away<br />
+              <div class="subtitle">Avril Lavigne</div>
+            </h5>
+            <i class="bi material-symbols-rounded play">play_circle</i>
+          </li> -->
+        </div>
+      </div>
+      <!-- Songs Banner -->
+      <div class="song_side">
+        <div class="song_bg">
+          <div class="song_bg__gradient">
+            <img
+              id="song_banner"
+              src="https://gigabeatmusiccoverart.files.wordpress.com/2014/11/avril-lavigne-banner.jpg?w=848"
+              alt=""
+            />
+          </div>
+        </div>
+        <nav class="">
+          <ul>
+            <li>Discover <span></span></li>
+            <li> <i class="bi material-icons" id="openMenu">favorite</i> </li>
+          </ul>
+          <div class="search">
+            <i class="bi material-icons">search</i>
+            <input
+              id="searchBar"
+              type="text"
+              placeholder="Search some music..."
+            />
+          </div>
+          <div class="user">
+            <img src="./img/user.jpg" alt="" />
+          </div>
+        </nav>
+
+        <div class="content">
+          <h1>Avril Lavigne - Under My Skin</h1>
+          <p>Take me away</p>
+          <div class="buttons">
+            <button>Play</button>
+            <button>Pause</button>
+          </div>
+        </div>
+
+        <div class="popular_song_section">
+          <div class="controls_section">
+            <h4>Popular</h4>
+            <div class="controls">
+              <i class="bi material-icons" id="popularSongArrowLeft"
+                >arrow_back_ios</i
+              >
+              <i class="bi material-icons" id="popularSongArrowRight"
+                >arrow_forward_ios</i
+              >
+            </div>
+          </div>
+          <div class="songs_list">
+            <!-- <div class="song" song_id="1">
+              <img src="./img/1.jpg" alt="" />
+              <div class="song_info text_abreviation">
+                <h5>Head Above Water</h5>
+                <p>Avril Lavigne</p>
+              </div>
+              <i id="1" class="bi material-symbols-rounded play">play_circle</i>
+            </div> -->
+          </div>
+        </div>
+
+        <div class="popular_artists">
+          <div class="controls_section">
+            <h4>Popular</h4>
+            <div class="controls">
+              <i class="bi material-icons" id="popularArtistArrowLeft"
+                >arrow_back_ios</i
+              >
+              <i class="bi material-icons" id="popularArtistArrowRight"
+                >arrow_forward_ios</i
+              >
+            </div>
+          </div>
+          <div class="artist_list">
+            <div class="artist">
+              <img src="./img/a1.jpg" alt="" />
+              <div class="name">
+                <h5>Avril Lavigne</h5>
+              </div>
+            </div>
+            <div class="artist">
+              <img src="./img/a2.jpg" alt="" />
+              <div class="name">
+                <h5>Taylor Swift</h5>
+              </div>
+            </div>
+            <div class="artist">
+              <img src="./img/a3.jpg" alt="" />
+              <div class="name">
+                <h5>Britney Spears</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Player -->
+      <div class="master_play">
+        <div class="wave">
+          <div class="wave1"></div>
+          <div class="wave1"></div>
+          <div class="wave1"></div>
+        </div>
+        <img src="./img/honey.jpg" alt="poster" id="poster_master_play" />
+        <h5 id="title" class="">
+          Head Avobe Water <br />
+          <div class="subtitle">Head Avobe Water</div>
+        </h5>
+        <div class="icon">
+          <i id="shuffle" class="bi material-symbols-rounded">shuffle</i>
+          <i id="skip_previous" class="bi material-symbols-rounded"
+            >skip_previous</i
+          >
+          <i id="play_circle" class="bi material-symbols-rounded"
+            >play_circle</i
+          >
+          <i id="skip_next" class="bi material-symbols-rounded">skip_next</i>
+          <i id="download" class="bi material-symbols-rounded">download</i>
+        </div>
+        <span id="currentTime">0:00 </span>
+        <div class="bar">
+          <input type="range" id="seek" min="0" max="100" />
+          <div class="bar2" id="progressBar"></div>
+          <div class="dot" id="progressDot"></div>
+        </div>
+        <span id="currentEnd">3:00 </span>
+        <div class="vol">
+          <i class="bi material-symbols-rounded" id="volIcon">volume_up</i>
+          <input type="range" id="volume" min="0" max="100" />
+          <div class="vol_bar"></div>
+          <div class="dot" id="vol_dot"></div>
+        </div>
+      </div>
+    </header>
+    <script src="./app.js"></script>
+  </body>
+</html>

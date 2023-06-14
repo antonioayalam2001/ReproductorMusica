@@ -1,0 +1,36 @@
+[
+    {
+        "user": 7,
+        "songs": [
+            {
+                "id": 7,
+                "preview": "./audio/7.mp3",
+                "title": "The best Damn thing",
+                "artist": {
+                    "name": "Avril Lavigne"
+                },
+                "html": "The best Damn Thing<br><div class=\"subtitle\">Avril Lavigne</div",
+                "album": {
+                    "cover_big": "./img/7.webp"
+                }
+            }
+        ]
+    },
+    {
+        "user": 2,
+        "songs": [
+            {
+                "id": 7,
+                "preview": "./audio/7.mp3",
+                "title": "The best Damn thing",
+                "artist": {
+                    "name": "Avril Lavigne"
+                },
+                "html": "The best Damn Thing<br><div class=\"subtitle\">Avril Lavigne</div",
+                "album": {
+                    "cover_big": "./img/7.webp"
+                }
+            }
+        ]
+    }
+]

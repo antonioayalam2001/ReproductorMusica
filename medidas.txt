@@ -1,0 +1,29 @@
+10rem = 160px
+9rem = 144px
+8rem = 128px
+7rem = 112px
+6rem = 96px
+5rem = 80px
+4rem = 64px
+3rem = 48px
+2rem = 32px
+1rem = 16px
+0.9rem = 14.4px
+0.8rem = 12.8px
+0.7rem = 11.2px
+0.5rem = 8px
+0.25rem = 4px
+0.125rem = 2px
+0.0625rem = 1px
+
+COLOR CLARO
+#828299
+
+
+    // 1rem = 16px
+    // 1rem = 100%
+    // 1rem = 1em
+    // 1em = 100%
+    // 1em = 16px
+    // 1em = 1rem
+    // 1em
