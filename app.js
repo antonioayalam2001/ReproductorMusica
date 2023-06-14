@@ -182,6 +182,7 @@ function createHTMLSongEleent(songs) {
             });
             // Creando el elemento de la cancion
             songItem.classList.add('song');
+            songItem.classList.add('no-select');
             songItem.setAttribute('song_id', song.id);
             songItem.innerHTML = `
             <div class="heart_reaction">
