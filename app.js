@@ -183,12 +183,16 @@ function createHTMLSongEleent(songs) {
             // Creando el elemento de la cancion
             songItem.classList.add('song');
             songItem.setAttribute('song_id', song.id);
-            songItem.innerHTML = `<img src=${song.album.cover_big} alt="">
+            songItem.innerHTML = `
+            <div class="heart_reaction">
+            <i class="material-icons">favorite</i>
+          </div>
+            <img src=${song.album.cover_big} alt="">
+            <i id="1" class="bi material-symbols-rounded play">play_circle</i>
             <div class="song_info text_abreviation">
                 <h5>${song.title}</h5>
                 <p>${song.artist.name}</p>
-            </div>
-            <i id="1" class="bi material-symbols-rounded play">play_circle</i>`;
+            </div>`;
             fragment.appendChild(songItem);
         });
         songsContainer.appendChild(fragment);
@@ -196,6 +200,12 @@ function createHTMLSongEleent(songs) {
         song.addEventListener('click', () => {
         changeSong(song.getAttribute('song_id'));
         });
+            song.addEventListener('dblclick', () => {
+                song.children[0].classList.add('visible');
+                setTimeout(() => {
+                    song.children[0].classList.remove('visible');
+                 }, 1200);
+             });
     });
 }
 async function fetchSongs(search) {
@@ -298,6 +308,21 @@ $openMenu.addEventListener('click', () => {
     menu.classList.add('active');
 
  });
+
+const $artists = document.querySelectorAll('.artist');
+$artists.forEach(artist => {
+    artist.addEventListener('dblclick', () => {
+        // const artistName = artist.getAttribute('artist_name');
+        // $input.value = artistName;
+        // songsContainer.innerHTML = '';
+        // fetchSongs(artistName.trim().toLowerCase());
+        artist.children[0].classList.add('visible');
+        setTimeout(() => {
+            artist.children[0].classList.remove('visible');
+         }, 1200);
+    });
+ });
+
 
 (async () => {
   favoritas = obtenerListaDeFavoritos();

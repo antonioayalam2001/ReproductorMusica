@@ -13,6 +13,12 @@
     border: 2px solid #fff;
 }
 
+.bi{
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}
+
 body{
     width: 100%;
     height: 100vh;
@@ -22,7 +28,8 @@ body{
 }
 
 header{
-    max-width: 90%;
+    min-width: 90%;
+    max-width: 95%;
     height: 95%;
     display: grid;
     flex-wrap: wrap;
@@ -43,7 +50,6 @@ header .master_play{
     background: #1e1e25;
     box-shadow: 0px 3px 8px #090f1f;
 }
-
 
 header .menu_side h1{
     font-size: 1.25rem;;
@@ -564,18 +570,19 @@ header .master_play .vol .vol_bar{
         height: 100%;
     }
 
-    .popular_song_section .songs_list .song i{
+    .popular_song_section .songs_list .song .bi{
         position: absolute;
-        transform: translate(40px,-150px);
-        color: aliceblue;
+        transform: translate(50px,50px);
+        top: 0;
         font-size: 3rem;
         opacity: 0;
         filter: drop-shadow(0px 0px 5px #ffa8e6);
         transition: all 0.3s ease-in-out;
+        left: 0;
     }
 
-    .popular_song_section .songs_list .song:hover i{
-        opacity: 1;
+    .popular_song_section .songs_list .song:hover .bi{
+        opacity: 0.4;
     }
 
     .popular_song_section .songs_list .song .song_info{
@@ -621,9 +628,30 @@ header .master_play .vol .vol_bar{
         border-radius: 50%;
         width: 100%;
         height: 100%;
-
     }
-    .artist .name{
+
+    .song .heart_reaction{
+        position: absolute;
+        width: 90%;
+        height: 75%;
+        opacity: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        top: 0;
+        -webkit-user-select: none; /* Safari */
+        -ms-user-select: none; /* IE 10 and IE 11 */
+        user-select: none; /* Standard syntax */
+    }
+    .song .heart_reaction:is(.visible) + img + i {
+        display: none;
+        z-index: 1;
+    }
+
+    .artist .name,
+    .artist .heart_reaction
+    {
         position: absolute;
         width: 100%;
         height: 100%;
@@ -634,13 +662,49 @@ header .master_play .vol .vol_bar{
         justify-content: center;
         top: 0;
     }
+
+    .heart_reaction.visible{
+        opacity: 0;
+        z-index: 1;
+        animation: popUp 1s ease-in-out;
+    }
+    .heart_reaction.visible i{
+        filter: drop-shadow(0px 0px 5px #212121);
+    }
+
+    @keyframes popUp{
+        0%{
+            opacity: 0;
+            transform: scale(0);
+        }
+        15%{
+            transform: scale(1.5);
+        }
+        30%{
+            transform: scale(1);
+        }
+        45%,80%{
+            transform: scale(2);
+        }
+        100%{
+            opacity: 1;
+            transform: scale(0);
+        }
+    }
+
     .artist .name h5{
         font-size: 0.8rem;
         font-weight: 500;
         color: aliceblue;
         transition: all 0.3s ease-in-out;
+        -webkit-user-select: none; /* Safari */
+        -ms-user-select: none; /* IE 10 and IE 11 */
+        user-select: none; /* Standard syntax */
     }
     .artist{
+        -webkit-user-select: none; /* Safari */
+        -ms-user-select: none; /* IE 10 and IE 11 */
+        user-select: none; /* Standard syntax */
         position: relative;
         transition: all 0.3s ease-in-out;
     }
