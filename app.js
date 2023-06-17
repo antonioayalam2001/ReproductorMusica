@@ -25,13 +25,28 @@ const $input = document.getElementById('searchBar');
 let currentSong = 0;
 let songsPaths = [{}];
 let favoritas = [];
+let currentSearch = '';
 $input.addEventListener('focusout', (e) => { 
     const songName = e.target.value;
-    if(songName.length > 0){
+    if (songName.length > 0 && songName !== currentSearch) {
+        currentSearch = songName;
         songsContainer.innerHTML = '';
         fetchSongs(songName.trim().toLowerCase());
     }
 });
+
+window.addEventListener('keydown', (e) => {
+    if($input.focus ){
+        if(e.key === 'Enter'){
+            const songName = $input.value;
+            if (songName.length > 0 && songName !== currentSearch) {
+                currentSearch = songName;
+                songsContainer.innerHTML = '';
+                fetchSongs(songName.trim().toLowerCase());
+            }
+        }
+    }
+ });
 
 $play_circleButton.addEventListener('click', () => {
     changeSymbol();
